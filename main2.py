@@ -1,3 +1,5 @@
+# -------- THIS CODE USE LOGISTIC REGRESSION ALGORITHM ---------
+
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -20,7 +22,7 @@ X = mail_data['Message']
 Y = mail_data['Category']
 
 # Split data to 2 parts: For training and testing
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=3)
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.8)
 
 # Transform test data to feature vectors that can be used as input to the Logistic Regression
 feature_extraction = TfidfVectorizer(min_df=1, stop_words='english', lowercase=True)
